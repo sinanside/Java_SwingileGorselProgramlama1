@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 public class App extends JFrame {
     private JButton gönderButton;
     private JPanel Jpanel;
+    private JTextField mesaj;
 
     public App() {
         setContentPane(Jpanel);
@@ -16,7 +17,8 @@ public class App extends JFrame {
         gönderButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(App.this,"Butona tıkladınız...");
+                String message= mesaj.getText();
+                JOptionPane.showMessageDialog(App.this,"Merhaba "+message);
             }
         });
     }
